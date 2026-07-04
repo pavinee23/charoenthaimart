@@ -8,8 +8,13 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/charoenthaimart/shop",
-        destination: `${LIVE_SITE}/charoenthaimart/shop`,
+        source: "/charoenthaimart",
+        destination: `${LIVE_SITE}/charoenthaimart`,
+        permanent: false,
+      },
+      {
+        source: "/charoenthaimart/:path*",
+        destination: `${LIVE_SITE}/charoenthaimart/:path*`,
         permanent: false,
       },
     ];
